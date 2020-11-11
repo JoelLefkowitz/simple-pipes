@@ -16,7 +16,7 @@ Subprocess utils
 To install the package from pypi:
 
 ```bash
-pip install pipes
+pip install simple_pipes
 ```
 
 Alternatively, you can clone the repo and build the package locally.
@@ -78,9 +78,9 @@ None yet!
 
 [license]: https://img.shields.io/github/license/joellefkowitz/pipes
 [release]: https://img.shields.io/github/v/tag/joellefkowitz/pipes
-[pypi_downloads]: https://img.shields.io/pypi/dw/pipes
-[pypi]: https://img.shields.io/pypi/v/pipes "PyPi"
-[pypi_link]: https://pypi.org/project/pipes
+[pypi_downloads]: https://img.shields.io/pypi/dw/simple_pipes
+[pypi]: https://img.shields.io/pypi/v/simple_pipes "PyPi"
+[pypi_link]: https://pypi.org/project/simple_pipes
 [issues]: https://img.shields.io/github/issues/joellefkowitz/pipes "Issues"
 [issues_link]: https://github.com/JoelLefkowitz/pipes/issues
 [pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/pipes "Pull requests"
