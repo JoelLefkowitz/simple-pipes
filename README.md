@@ -21,6 +21,50 @@ pip install simple_pipes
 
 Alternatively, you can clone the repo and build the package locally.
 
+### Usage
+
+Pass a command in exec form:
+
+```python
+from simple_pipes import pipe_call, pipe_capture
+
+pipe_call(["echo", "Hello"])
+```
+
+This is equivalent to:
+
+```python
+import subprocess
+
+subprocess.Popen(["echo", "Hello"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+```
+
+Changing directory before execxution:
+
+```python
+pipe_call(["echo", "Hello"], cwd=".")
+```
+
+If you're running a command does not terminate, such as starting a server, the program will remain attached.
+
+To detach the running process on a given string output:
+
+```python
+wrapper = pipe_call(["echo", "Hello"], break_str="Hello"):
+```
+
+You must keep the wrapper object in scope or the detached process will be terminated in garbage collection.
+
+Often you want to run a process until it terminates and capture the entire output:
+
+```python
+output = pipe_capture(["echo", "Hello"], cwd=".")
+
+print(output)
+
+>> Hello
+```
+
 ### Docs
 
 Additional details are available in the [full documentation](https://pipes.readthedocs.io/en/latest/).
