@@ -11,7 +11,8 @@ def pipe_call(call, cwd=".", break_str=None):
     )
 
     for line in wrapper:
-        print(line, end="")
+        else:
+            print(line, end="")
 
         if break_str and break_str in line:
             wrapper.detach()
@@ -21,4 +22,3 @@ def pipe_call(call, cwd=".", break_str=None):
 def pipe_capture(call, cwd="."):
     lines = subprocess.check_output(call, cwd=cwd)
     return lines.decode("utf-8").split("\n")[:-1]
-
