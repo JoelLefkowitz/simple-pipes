@@ -1,6 +1,6 @@
 # Simple pipes
 
-Subprocess utils
+Subprocess utils.
 
 ## Status
 
