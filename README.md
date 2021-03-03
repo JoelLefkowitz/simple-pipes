@@ -1,25 +1,22 @@
-# Pipes
+# Simple pipes
 
 Subprocess utils
 
-### Status
+## Status
 
-| Source     | Shields                                                        |
-| ---------- | -------------------------------------------------------------- |
-| Project    | ![license][license] ![release][release]                        |
-| Publishers | [![pypi][pypi]][pypi_link]                                     |
-| Downloads  | ![pypi_downloads][pypi_downloads]                              |
-| Raised     | [![issues][issues]][issues_link] [![pulls][pulls]][pulls_link] |
+| Source     | Shields                                                                                                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ |
+| Project    | ![release][release_shield] ![license][license_shield] ![dependents][dependents_shield]                             |
+| Health     | ![travis][travis_shield] ![codacy][codacy_shield] ![coverage][coverage_shield] ![readthedocs][readthedocs_shield]  |
+| Repository | ![issues][issues_shield] ![pulls][pulls_shield]                                                                    |
+| Publishers | ![pypi][pypi_shield] ![python_versions][python_versions_shield] ![pypi_downloads][pypi_downloads_shield]           |
+| Activity   | ![contributors][contributors_shield] ![monthly_commits][monthly_commits_shield] ![last_commit][last_commit_shield] |
 
-### Installing
-
-To install the package from pypi:
+## Installation
 
 ```bash
 pip install simple_pipes
 ```
-
-Alternatively, you can clone the repo and build the package locally.
 
 ### Usage
 
@@ -65,35 +62,62 @@ print(output)
 >> Hello
 ```
 
-### Docs
+## Tests
 
-Additional details are available in the [full documentation](https://pipes.readthedocs.io/en/latest/).
-
-To generate the documentation locally:
+To run unit tests:
 
 ```bash
-multi-job docs
+grunt tests:unit
 ```
 
-### Tests
-
-Unit tests and behaviour tests are written with the pytest framework.
-
-To run tests:
+To generate a coverage report:
 
 ```bash
-multi-job tests
+grunt tests:coverage
 ```
 
-Additionally, an html report will be saved to the local directory.
+## Documentation
 
-### Contributing
+This repository's documentation is hosted on [readthedocs][readthedocs].
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+To generate the sphinx configuration:
 
-### Versioning
+```bash
+grunt docs:generate
+```
 
-[SemVer](http://semver.org/) is used for versioning. For a list of versions available, see the tags on this repository.
+Then build the documentation:
+
+```bash
+grunt docs:build
+```
+
+## Tooling
+
+To run linters:
+
+```bash
+grunt lint
+```
+
+To run formatters:
+
+```bash
+grunt format
+```
+
+Before commiting new code:
+
+```bash
+grunt precommit
+```
+
+This will run linters, formaters, generate a test coverage report and the sphinx configuration.
+
+## Versioning
+
+This repository adheres to semantic versioning standards.
+For more inforamtion on semantic versioning visit [SemVer][semver].
 
 Bump2version is used to version and tag changes.
 For example:
@@ -102,30 +126,69 @@ For example:
 bump2version patch
 ```
 
-Releases are made on every major change.
+## Changelog
 
-### Author
+Please read this repository's [CHANGELOG](CHANGELOG.md) for details on changes that have been made.
 
-- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz](https://github.com/JoelLefkowitz)
+## Contributing
 
-See also the list of contributors who participated in this project.
+Please read this repository's guidelines on [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-### License
+## Contributors
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz][joellefkowitz]
 
-### Acknowledgments
+[![Buy Me A Coffee][coffee_button]][coffee]
 
-None yet!
+## Remarks
 
-<!--- Table links --->
+Lots of love to the open source community!
 
-[license]: https://img.shields.io/github/license/joellefkowitz/pipes
-[release]: https://img.shields.io/github/v/tag/joellefkowitz/pipes
-[pypi_downloads]: https://img.shields.io/pypi/dw/simple_pipes
-[pypi]: https://img.shields.io/pypi/v/simple_pipes "PyPi"
-[pypi_link]: https://pypi.org/project/simple_pipes
-[issues]: https://img.shields.io/github/issues/joellefkowitz/pipes "Issues"
-[issues_link]: https://github.com/JoelLefkowitz/pipes/issues
-[pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/pipes "Pull requests"
-[pulls_link]: https://github.com/JoelLefkowitz/pipes/pulls
+![Be kind][be_kind]
+
+<!-- Github links -->
+
+[pulls]: https://github.com/JoelLefkowitz/simple-pipes/pulls
+[issues]: https://github.com/JoelLefkowitz/simple-pipes/issues
+
+<!-- External links -->
+
+[readthedocs]: https://simple-pipes.readthedocs.io/en/latest/
+[semver]: http://semver.org/
+[coffee]: https://www.buymeacoffee.com/joellefkowitz
+[coffee_button]: https://cdn.buymeacoffee.com/buttons/default-blue.png
+[be_kind]: https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif
+
+<!-- Acknowledgments -->
+
+[joellefkowitz]: https://github.com/JoelLefkowitz
+
+<!-- Project shields -->
+
+[release_shield]: https://img.shields.io/github/v/tag/joellefkowitz/simple-pipes
+[license_shield]: https://img.shields.io/github/license/joellefkowitz/simple-pipes
+[dependents_shield]: https://img.shields.io/librariesio/dependent-repos/pypi/simple_pipes
+
+<!-- Health shields -->
+
+[travis_shield]: https://img.shields.io/travis/joellefkowitz/simple-pipes
+[codacy_shield]: https://img.shields.io/codacy/coverage/simple-pipes
+[coverage_shield]: https://img.shields.io/codacy/grade/simple-pipes
+[readthedocs_shield]: https://img.shields.io/readthedocs/simple-pipes
+
+<!-- Repository shields -->
+
+[issues_shield]: https://img.shields.io/github/issues/joellefkowitz/simple-pipes
+[pulls_shield]: https://img.shields.io/github/issues-pr/joellefkowitz/simple-pipes
+
+<!-- Publishers shields -->
+
+[pypi_shield]: https://img.shields.io/pypi/v/simple_pipes
+[python_versions_shield]: https://img.shields.io/pypi/pyversions/simple_pipes
+[pypi_downloads_shield]: https://img.shields.io/pypi/dw/simple_pipes
+
+<!-- Activity shields -->
+
+[contributors_shield]: https://img.shields.io/github/contributors/joellefkowitz/simple-pipes
+[monthly_commits_shield]: https://img.shields.io/github/commit-activity/m/joellefkowitz/simple-pipes
+[last_commit_shield]: https://img.shields.io/github/last-commit/joellefkowitz/simple-pipes

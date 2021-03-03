@@ -1,0 +1,7 @@
+project: simple-pipes
+version: 0.3.1
+author: Joel Lefkowitz
+verbose_name: Simple pipes
+html_title: Simple pipes
+github_url: JoelLefkowitz/simple-pipes
+apidoc_module_dir: simple_pipes
