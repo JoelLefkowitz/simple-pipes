@@ -2,21 +2,21 @@
 
 Subprocess utils.
 
-## Status
-
-| Source     | Shields                                                                                                            |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| Project    | ![release][release_shield] ![license][license_shield] ![dependents][dependents_shield]                             |
-| Health     | ![travis][travis_shield] ![codacy][codacy_shield] ![coverage][coverage_shield] ![readthedocs][readthedocs_shield]  |
-| Repository | ![issues][issues_shield] ![pulls][pulls_shield]                                                                    |
-| Publishers | ![pypi][pypi_shield] ![python_versions][python_versions_shield] ![pypi_downloads][pypi_downloads_shield]           |
-| Activity   | ![contributors][contributors_shield] ![monthly_commits][monthly_commits_shield] ![last_commit][last_commit_shield] |
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/simple-pipes/review.yml)
+![Version](https://img.shields.io/pypi/v/simple-pipes)
+![Downloads](https://img.shields.io/pypi/dw/simple-pipes)
+![Quality](https://img.shields.io/codacy/grade/dc58dc1425df48c5be692f01029b732e)
+![Coverage](https://img.shields.io/codacy/coverage/dc58dc1425df48c5be692f01029b732e)
 
 ## Installation
 
 ```bash
-pip install simple_pipes
+pip install simple-pipes
 ```
+
+## Documentation
+
+Documentation and more detailed examples are hosted on [Github Pages](https://joellefkowitz.github.io/simple-pipes).
 
 ### Usage
 
@@ -36,7 +36,7 @@ import subprocess
 subprocess.Popen(["echo", "Hello"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 ```
 
-Changing directory before execxution:
+Changing directory before execution:
 
 ```python
 pipe_call(["echo", "Hello"], cwd=".")
@@ -62,133 +62,71 @@ print(output)
 >> Hello
 ```
 
-## Tests
-
-To run unit tests:
-
-```bash
-grunt tests:unit
-```
-
-To generate a coverage report:
-
-```bash
-grunt tests:coverage
-```
-
-## Documentation
-
-This repository's documentation is hosted on [readthedocs][readthedocs].
-
-To generate the sphinx configuration:
-
-```bash
-grunt docs:generate
-```
-
-Then build the documentation:
-
-```bash
-grunt docs:build
-```
-
 ## Tooling
+
+### Dependencies
+
+To install dependencies:
+
+```bash
+yarn install
+pip install .[all]
+```
+
+### Tests
+
+To run tests:
+
+```bash
+thx test
+```
+
+### Documentation
+
+To generate the documentation locally:
+
+```bash
+thx docs
+```
+
+### Linters
 
 To run linters:
 
 ```bash
-grunt lint
+thx lint
 ```
+
+### Formatters
 
 To run formatters:
 
 ```bash
-grunt format
+thx format
 ```
 
-Before commiting new code:
+## Contributing
 
-```bash
-grunt precommit
-```
+Please read this repository's [Code of Conduct](CODE_OF_CONDUCT.md) which outlines our collaboration standards and the [Changelog](CHANGELOG.md) for details on breaking changes that have been made.
 
-This will run linters, formaters, generate a test coverage report and the sphinx configuration.
+This repository adheres to semantic versioning standards. For more information on semantic versioning visit [SemVer](https://semver.org).
 
-## Versioning
-
-This repository adheres to semantic versioning standards.
-For more inforamtion on semantic versioning visit [SemVer][semver].
-
-Bump2version is used to version and tag changes.
-For example:
+Bump2version is used to version and tag changes. For example:
 
 ```bash
 bump2version patch
 ```
 
-## Changelog
+### Contributors
 
-Please read this repository's [CHANGELOG](CHANGELOG.md) for details on changes that have been made.
-
-## Contributing
-
-Please read this repository's guidelines on [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## Contributors
-
-- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz][joellefkowitz]
-
-[![Buy Me A Coffee][coffee_button]][coffee]
+- [Joel Lefkowitz](https://github.com/joellefkowitz) - Initial work
 
 ## Remarks
 
 Lots of love to the open source community!
 
-![Be kind][be_kind]
-
-<!-- Github links -->
-
-[pulls]: https://github.com/JoelLefkowitz/simple-pipes/pulls
-[issues]: https://github.com/JoelLefkowitz/simple-pipes/issues
-
-<!-- External links -->
-
-[readthedocs]: https://simple-pipes.readthedocs.io/en/latest/
-[semver]: http://semver.org/
-[coffee]: https://www.buymeacoffee.com/joellefkowitz
-[coffee_button]: https://cdn.buymeacoffee.com/buttons/default-blue.png
-[be_kind]: https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif
-
-<!-- Acknowledgments -->
-
-[joellefkowitz]: https://github.com/JoelLefkowitz
-
-<!-- Project shields -->
-
-[release_shield]: https://img.shields.io/github/v/tag/joellefkowitz/simple-pipes
-[license_shield]: https://img.shields.io/github/license/joellefkowitz/simple-pipes
-[dependents_shield]: https://img.shields.io/librariesio/dependent-repos/pypi/simple_pipes
-
-<!-- Health shields -->
-
-[travis_shield]: https://img.shields.io/travis/joellefkowitz/simple-pipes
-[codacy_shield]: https://img.shields.io/codacy/coverage/simple-pipes
-[coverage_shield]: https://img.shields.io/codacy/grade/simple-pipes
-[readthedocs_shield]: https://img.shields.io/readthedocs/simple-pipes
-
-<!-- Repository shields -->
-
-[issues_shield]: https://img.shields.io/github/issues/joellefkowitz/simple-pipes
-[pulls_shield]: https://img.shields.io/github/issues-pr/joellefkowitz/simple-pipes
-
-<!-- Publishers shields -->
-
-[pypi_shield]: https://img.shields.io/pypi/v/simple_pipes
-[python_versions_shield]: https://img.shields.io/pypi/pyversions/simple_pipes
-[pypi_downloads_shield]: https://img.shields.io/pypi/dw/simple_pipes
-
-<!-- Activity shields -->
-
-[contributors_shield]: https://img.shields.io/github/contributors/joellefkowitz/simple-pipes
-[monthly_commits_shield]: https://img.shields.io/github/commit-activity/m/joellefkowitz/simple-pipes
-[last_commit_shield]: https://img.shields.io/github/last-commit/joellefkowitz/simple-pipes
+<div align='center'>
+    <img width=200 height=200 src='https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif' alt='Be kind to your mind' />
+    <img width=200 height=200 src='https://media.giphy.com/media/KEAAbQ5clGWJwuJuZB/giphy.gif' alt='Love each other' />
+    <img width=200 height=200 src='https://media.giphy.com/media/WRWykrFkxJA6JJuTvc/giphy.gif' alt="It's ok to have a bad day" />
+</div>
