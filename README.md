@@ -8,7 +8,7 @@ Subprocess utils.
 ![Quality](https://img.shields.io/codacy/grade/dc58dc1425df48c5be692f01029b732e)
 ![Coverage](https://img.shields.io/codacy/coverage/dc58dc1425df48c5be692f01029b732e)
 
-## Installation
+## Installing
 
 ```bash
 pip install simple-pipes
