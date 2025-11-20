@@ -2,7 +2,7 @@
 
 Subprocess utils.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/simple-pipes/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/simple-pipes/review.yaml)
 ![Version](https://img.shields.io/pypi/v/simple-pipes)
 ![Downloads](https://img.shields.io/pypi/dw/simple-pipes)
 ![Quality](https://img.shields.io/codacy/grade/dc58dc1425df48c5be692f01029b732e)
